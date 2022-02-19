@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP Address Tracker</title>
+    <link rel="icon" href="https://img.icons8.com/fluency/48/000000/ip-address.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+    <!-- <script type="application/javascript" src="http://ipinfo.io/?format=jsonp&callback=getIP"></script> -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="fullScreen">
+        <div class="hader">
+            <div class="background-img-box">
+                <img src="img/pattern-bg.png" id="background-img" alt="hader background img">
+            </div>
+
+            <div class="hader-options">
+                <h1 id="akbc">IP Address Tracker</h1>
+                <div class="input-box-div">
+                    <input type="text" name="ip-input-box" id="id-input-box" placeholder="Enter IP Address...">
+                    <div class="input-next" onclick="nextsearch()" >
+                        <img src="img/icon-arrow.svg" alt="next-arrow-input">
+                    </div>
+                </div>
+            </div>
+            <div class="ip-info-box-cover">
+                <div class="ip-info-box">
+                    <div class="user-details-box">
+                        <p class="user-ip-box-1st-text">IP ADDRESS</p>
+                        <h1 class="user-ip-box-2nd-text" id="user-ip-address">
+                            193.212.132.131
+                        </h1>
+                    </div>
+                    <div class="user-details-box">
+                        <p class="user-ip-box-1st-text">LOCATION</p>
+                        <h2 class="user-ip-box-2nd-text" id="user-ip-location">
+                            Brooklyn, NY 10001
+                        </h2>
+                    </div>
+                    <div class="user-details-box">
+                        <p class="user-ip-box-1st-text">TIMEZONE</p>
+                        <h1 class="user-ip-box-2nd-text" id="user-ip-timezone">
+                            UTC-05:00
+                        </h1>
+                    </div>
+                    <div class="user-details-box">
+                        <p class="user-ip-box-1st-text">ISP</p>
+                        <h2 class="user-ip-box-2nd-text" id="user-ip-isp">
+                            SpaceX Starlink
+                        </h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="map" id="map">
+
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>
